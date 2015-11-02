@@ -15,6 +15,7 @@ $(easel).on('mousemove', function(e) {
   cursor.y = e.pageY - this.offsetTop;
 });
 new ColorChange('.black');
+new ColorChange('.yellow');
 new ColorChange('.red');
 new ColorChange('.blue');
 new ColorChange('.green');
