@@ -1,7 +1,7 @@
 //http://www.html5canvastutorials.com/labs/html5-canvas-paint-application/ mad props to this tutorial for teaching me how canvas works.
 var easel = $('#easel').get(0);
 var ctx = easel.getContext('2d');
-var painting = document.getElementById('paint');
+var painting = $('#paint').get(0);
 var paint_style = getComputedStyle(painting);
 easel.width = parseInt(paint_style.getPropertyValue('width'));
 easel.height = parseInt(paint_style.getPropertyValue('height'));
