@@ -1,5 +1,7 @@
 body {
   -webkit-user-select: none; }
+  body p {
+    text-align: center; }
 
 #paint {
   border: 2px solid black;
