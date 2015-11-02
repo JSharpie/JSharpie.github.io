@@ -26,6 +26,7 @@ $('.clear').on('click', function(e){
 });
 $('.eraser').on('click', function(e){
   ctx.strokeStyle = 'white';
+  ctx.fillStyle = 'white';
 });
 $('#easel').on('dblclick', function(e){
   ctx.fill();
