@@ -1,0 +1,28 @@
+{
+  "name": "paint-tool",
+  "description": "a simple painting tool",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "paint",
+    "tool",
+    "fun",
+    "relax"
+  ],
+  "authors": [
+    "Jacob Sharp"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "underscore": "~1.8.3"
+  }
+}

@@ -1,0 +1,56 @@
+#paint{
+  border:2px solid black;
+  height:500px;
+  width:500px;
+  margin:0 auto;
+  clear:both;
+}
+.tools{
+  display:inline-block;
+  text-align:center;
+  margin: 0 auto;
+  width:100%;
+}
+.black{
+  background-color:black;
+  display:inline-block;
+  color:white;
+  margin:0 auto;
+  width:50px;
+  height:20px;
+}
+.red{
+  background-color:red;
+  text-align:center;
+  width:50px;
+  height:20px;
+  display:inline-block;
+}
+.blue{
+  background-color:blue;
+  display:inline-block;
+  margin:0 auto;
+  width:50px;
+  height:20px;
+}
+.green{
+  background-color:green;
+  display:inline-block;
+  margin:0 auto;
+  width:50px;
+  height:20px;
+}
+.clear{
+  display:inline-block;
+  margin:0 auto;
+  width:48px;
+  height:18px;
+  border:1px solid black;
+}
+.eraser{
+  display:inline-block;
+  margin:0 auto;
+  width:48px;
+  height:18px;
+  border:1px solid black;
+}
