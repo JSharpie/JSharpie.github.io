@@ -18,6 +18,9 @@ new ColorChange('.black');
 new ColorChange('.red');
 new ColorChange('.blue');
 new ColorChange('.green');
+new SizeChange('.smallPen');
+new SizeChange('.medPen');
+new SizeChange('.largePen');
 $('.clear').on('click', function(e){
   ctx.clearRect(0,0,easel.width, easel.height);
 });
@@ -41,6 +44,20 @@ var painted = function() {
 };
 function ColorChange(clrCls){
   $(clrCls).on('click', function(){
+    ctx.fillStyle = $(this).text();
     ctx.strokeStyle = $(this).text();
+  });
+}
+function SizeChange(sizeCls){
+  $(sizeCls).on('click', function(){
+    if($(this).text() === "Small Pen"){
+      ctx.lineWidth = 3;
+    }
+    if($(this).text() === "Medium Pen"){
+      ctx.lineWidth = 7;
+    }
+    if($(this).text() === "Large Pen"){
+      ctx.lineWidth = 11;
+    }
   });
 }

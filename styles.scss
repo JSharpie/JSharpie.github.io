@@ -3,7 +3,6 @@
   height:500px;
   width:500px;
   margin:0 auto;
-  clear:both;
 }
 .tools{
   display:inline-block;
@@ -16,13 +15,13 @@
   display:inline-block;
   color:white;
   margin:0 auto;
-  width:50px;
+  width:85px;
   height:20px;
 }
 .red{
   background-color:red;
   text-align:center;
-  width:50px;
+  width:85px;
   height:20px;
   display:inline-block;
 }
@@ -30,27 +29,48 @@
   background-color:blue;
   display:inline-block;
   margin:0 auto;
-  width:50px;
+  width:85px;
   height:20px;
 }
 .green{
   background-color:green;
   display:inline-block;
   margin:0 auto;
-  width:50px;
+  width:80px;
   height:20px;
 }
 .clear{
   display:inline-block;
   margin:0 auto;
-  width:48px;
+  width:83px;
   height:18px;
   border:1px solid black;
 }
 .eraser{
   display:inline-block;
   margin:0 auto;
-  width:48px;
+  width:83px;
+  height:18px;
+  border:1px solid black;
+}
+.smallPen{
+  display:inline-block;
+  margin:0 auto;
+  width:83px;
+  height:18px;
+  border:1px solid black;
+}
+.medPen{
+  display:inline-block;
+  margin:0 auto;
+  width:83px;
+  height:18px;
+  border:1px solid black;
+}
+.largePen{
+  display:inline-block;
+  margin:0 auto;
+  width:83px;
   height:18px;
   border:1px solid black;
 }
