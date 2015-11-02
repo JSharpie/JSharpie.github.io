@@ -2,9 +2,9 @@
 var easel = $('#easel').get(0);
 var ctx = easel.getContext('2d');
 var painting = $('#paint').get(0);
-var paint_style = getComputedStyle(painting);
-easel.width = parseInt(paint_style.getPropertyValue('width'));
-easel.height = parseInt(paint_style.getPropertyValue('height'));
+var paintDim = getComputedStyle(painting);
+easel.width = parseInt(paintDim.getPropertyValue('width'));
+easel.height = parseInt(paintDim.getPropertyValue('height'));
 var cursor = {x: 0, y: 0};
 ctx.lineWidth = 3;
 ctx.lineJoin = 'round';
@@ -14,18 +14,10 @@ $(easel).on('mousemove', function(e) {
   cursor.x = e.pageX - this.offsetLeft;
   cursor.y = e.pageY - this.offsetTop;
 });
-$('.black').on('click', function(e){
-  ctx.strokeStyle = 'black';
-});
-$('.red').on('click', function(e){
-  ctx.strokeStyle = 'red';
-});
-$('.blue').on('click', function(e){
-  ctx.strokeStyle = 'blue';
-});
-$('.green').on('click', function(e){
-  ctx.strokeStyle = 'green';
-});
+new ColorChange('.black');
+new ColorChange('.red');
+new ColorChange('.blue');
+new ColorChange('.green');
 $('.clear').on('click', function(e){
   ctx.clearRect(0,0,easel.width, easel.height);
 });
@@ -47,3 +39,8 @@ var painted = function() {
     ctx.lineTo(cursor.x, cursor.y);
     ctx.stroke();
 };
+function ColorChange(clrCls){
+  $(clrCls).on('click', function(){
+    ctx.strokeStyle = $(this).text();
+  });
+}
