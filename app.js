@@ -6,6 +6,7 @@ var paintDim = getComputedStyle(painting);
 easel.width = parseInt(paintDim.getPropertyValue('width'));
 easel.height = parseInt(paintDim.getPropertyValue('height'));
 var cursor = {x: 0, y: 0};
+var currFill;
 ctx.lineWidth = 3;
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
@@ -23,7 +24,9 @@ new SizeChange('.smallPen');
 new SizeChange('.medPen');
 new SizeChange('.largePen');
 $('.clear').on('click', function(e){
-  ctx.clearRect(0,0,easel.width, easel.height);
+  ctx.fillStyle = 'white';
+  ctx.fillRect(0,0,easel.width, easel.height);
+  ctx.fillStyle = currFill;
 });
 $('.eraser').on('click', function(e){
   ctx.strokeStyle = 'white';
@@ -47,6 +50,7 @@ var painted = function() {
 function ColorChange(clrCls){
   $(clrCls).on('click', function(){
     ctx.fillStyle = $(this).text();
+    currFill = $(this).text();
     ctx.strokeStyle = $(this).text();
   });
 }
